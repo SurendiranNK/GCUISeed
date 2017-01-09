@@ -1,0 +1,66 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+                    <img alt="image" src="assets/images/logo-anura-sidebar.png"/>
+                    <a uib-dropdown-toggle="" href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{main.userName}}</strong>
+                             </span>
+                                <span class="text-muted text-xs block">Admin<b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated flipInX m-t-xs">
+                        <li><a ui-sref="app.profile">{{ 'MENU.CONFIG_PROFILE' | translate }}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">{{ 'MENU.LOGOUT' | translate }}</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    A+
+                </div>
+
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.main"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
+            </li>
+
+            <li>
+                <a href=""><i class="fa fa-phone"></i> <span class="nav-label">{{ 'MENU.CALLS' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="">{{ 'MENU.CALLS_HISTORY' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CALLS_PRICES' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CALLS_STATISTICS' | translate }}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-gear"></i> <span class="nav-label">{{ 'MENU.CONFIG' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="">{{ 'MENU.CONFIG_ACCOUNTS' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_IVRS' | translate }}</a></li>
+                    <li><a ui-sref="index.queue">{{ 'MENU.CONFIG_QUEUE' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_DROPBOX' | translate }}</a></li> 
+                    <li><a href="">{{ 'MENU.CONFIG_NOGEO' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_GENERAL' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_TERMINALS' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_PROFILE' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.CONFIG_APHONE' | translate }}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-dollar"></i> <span class="nav-label">{{ 'MENU.BILLING' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="">{{ 'MENU.BILLING_HISTORY' | translate }}</a></li>
+                    <li><a href="">{{ 'MENU.BILLING_PAY' | translate }}</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+    </div>
+</nav>

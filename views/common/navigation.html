@@ -1,0 +1,60 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+           <li class="nav-header">
+                    <div class="profile-element logo-anura">
+                        <img alt="image" src="img/logo-anura.png" />
+                    </div>
+                    <div class="logo-element logo-anura-element">
+                        <img src="img/logo-anura-element.png" alt="image" />
+                    </div>
+                </li>
+                <li class="nav-header padd0">
+                    <div class="dropdown profile-element img-pic"> <span>
+                            <img alt="image" class="img-circle img-responsive" src="img/profile_small.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear txt-center"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                            
+                        </a>                       
+                    </div>
+                    <div class="logo-element">
+                        <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                    </div>
+            </li>        
+            <li ng-class="{active: $state.includes('dashboards')}" class="active">
+                <a href="#"><i class="fa fa-headphones"></i><span class="nav-label">{{ 'Llamadas' | translate }}</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">
+                    <li class="active" ui-sref-active="active"><a u href="#/tables/historical">{{ 'Historial' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">{{ 'Precios' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">{{ 'Estadísticas' | translate }}</a></li>
+                    
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('charts')}">
+                <a href=""><i class="fa fa-gears"></i> <span class="nav-label">{{ 'Configuración' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('charts')}">
+                    <li ui-sref-active="active"><a ui-sref="#">Cuentas</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Pre-atendedores / IVRs</a></li>
+                    <li ui-sref-active="active"><a href="#/forms/colas_de_espera">Colas de Espera</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Dropbox</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">General</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Estado Terminales</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Preferencias Usuario</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Activar aPhone</a></li>
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('mailbox')}">
+                <a ui-sref="inbox"><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'Mis Consumos' | translate }}</a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('mailbox')}">
+                    <li ui-sref-active="active"><a ui-sref="#">Historial Crédito</a></li>
+                    <li ui-sref-active="active"><a ui-sref="#">Comprar Crédito</a></li>                    
+                </ul>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="metrics"><i class="fa fa-life-ring"></i> <span class="nav-label">{{ 'Ayuda' | translate }}</span> </a>
+            </li>            
+        </ul>
+
+    </div>
+</nav>

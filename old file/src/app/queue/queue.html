@@ -1,0 +1,50 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>{{ 'MENU.CONFIG_QUEUE' | translate }}</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">{{ 'MENU.CONFIG' | translate }}</a>
+            </li>
+            <li class="active">
+                <strong>{{ 'MENU.CONFIG_QUEUE' | translate }}</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInUp" ng-controller="QueueController as qcon">
+    <div class="ibox">
+        <div class="ibox-title">
+                <div class="row">
+                    <div class="col-sm-6 m-b-xs">
+                        <a href="" class="btn btn-primary"><i class="fa fa-plus-circle"></i> {{ 'BUTTON.ADD' | translate }}</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="{{ 'SEARCH' | translate }}" class="input-sm form-control">
+                    </div>
+                </div>
+        </div>
+        <div class="ibox-content">
+
+            <div>
+                <table class="table table-hover table-striped">
+                    <tbody>
+                        <tr ng-repeat="queue in qcon.queues">
+                            <td class="project-title">
+                                <a ui-sref="project_detail">{{ queue.name }}</a>
+                            </td>
+                            <td class="project-actions">
+                                <a href="" class="btn btn-white btn-sm"><i class="fa fa-trash"></i> {{ 'BUTTON.DEL' | translate }} </a>
+                                <a href="" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> {{ 'BUTTON.EDIT' | translate }} </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

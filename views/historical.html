@@ -1,0 +1,206 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+                    <h2>HISTORIAL</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="">LLAMADAS</a>
+                        </li>
+                        <li class="active">
+                            <strong>HISTORIAL</strong>
+                        </li>
+                    </ol>
+     </div>
+    <div class="col-sm-8">
+                    <div class="title-action down-icon">
+                        <!--<a href="" class="btn btn-primary">This is action area</a>-->
+                        <a data-toggle="collapse" href="#collapseExample" aria-expanded="true" class=""><span class="glyphicon glyphicon-question-sign"></span></a>
+                    </div>
+                </div>
+                
+</div>
+ <div class="collapse bg-cont" id="collapseExample" aria-expanded="true">
+                <div class="card card-block qpr">
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="datatablesCtrl">
+    <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <div class="head-btn">
+                            <a class="btn btn-sm btn-primary" ng-click=filterData(desde,hasta,filtro);><i class="fa fa-search"></i> Buscar</a>
+                            <a class="btn btn-sm btn-primary"><i class="fa fa-download"></i></i> Exportar</a>
+                        </div>
+                        <div class="ibox-tools">
+                            <!-- <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>   -->                          
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                        	 <div class="col-sm-4">
+                            	 <div class="form-group" id="data_1">
+                                    <label class="font-noraml">Desde:</label>
+                        
+                                    <div class="input-group date">
+                                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                         <!-- <input type="datetime" class="form-control" date-time ng-model="desde" view="date" auto-close="true" min-view="date" format="YYYY-MM-DD"> -->
+                                          <input type="text" class="form-control" date-time data-ng-model="desde" view="month" auto-close="true" value="desde" id="date_desde">
+                                        <span class="input-group-addon" id="sizing-addon1"><a data-toggle="collapse" href="#collapseExample1" aria-expanded="false" class="collapsed"><span class="glyphicon glyphicon-question-sign"></span></a></span>
+                                    </div>
+                                    <div class="collapse bg-cont" id="collapseExample1" aria-expanded="true">
+                                        <div class="card card-block qpr">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4">
+                            	 <div class="form-group" id="data_1">
+                                    <label class="font-noraml">Hasta:</label>
+                        
+                                    <div class="input-group date">
+                                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                         <!-- <input type="datetime" class="form-control" date-time ng-model="hasta" view="date" auto-close="true" min-view="date" format="YYYY-MM-DD"> -->
+                                           <input type="text" class="form-control" date-time data-ng-model="hasta" view="month" auto-close="true" value="hasta" id="date_hasta">
+                                        <span class="input-group-addon" id="sizing-addon1"><a data-toggle="collapse" href="#collapseExample2" aria-expanded="false" class="collapsed"><span class="glyphicon glyphicon-question-sign"></span></a></span>
+                                    </div>
+                                    <div class="collapse bg-cont" id="collapseExample2" aria-expanded="true">
+                                        <div class="card card-block qpr">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="font-noraml">Filtro:</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="filtro" ng-model="filtro">
+                                        <span class="input-group-addon" id="sizing-addon1"><a data-toggle="collapse" href="#collapseExample3" aria-expanded="false" class="collapsed"><span class="glyphicon glyphicon-question-sign"></span></a></span>
+                                    </div>
+                                    <div class="collapse bg-cont" id="collapseExample3" aria-expanded="true">
+                                        <div class="card card-block qpr">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+   <div class="collapse bg-cont in" id="collapseExample" aria-expanded="true" ng-show="IsVisible"  >
+        <div class="card card-block qpr1 clearfix">
+              <div class="pull-right close-btn"><a ng-click="ShowHide(1)"><i class="fa fa-times"></i></a></div>
+         
+               <div class="col-lg-4">
+               <audio controls> 
+            <!--       <source data-ng-src="{{audioURL}}" audio player controls pre-load="none"></source> -->
+
+                  <source ng-src="{{trustedUrl(audioURL)}}" type="audio/mpeg">
+                  </audio> 
+               </div>
+               <div class="col-lg-4">  
+                  <a  class="btn btn-primary btn-rounded" ng-href="{{audioURL}}" download="audio">Download</a>  
+               <!-- <button class="btn btn-primary btn-rounded" ng-click="downloadAudio();">Download</button>  -->
+               </div>    
+          </div>
+  </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Llamadas <strong>Historial</strong></h5>
+
+                   
+                </div>
+                <div class="ibox-content">
+                    <table datatable="ng" dt-options="dtOptions"  class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                         <tr>
+                            <th>Fecha</th>
+                            <th>Dir</th>
+                            <th width="75px">Nro Origen </th>
+                            <th>Origen </th>
+                            <th>Nro Destino</th>
+                            <th>Destino</th>
+                            <th>Estado</th>
+                            <th>Duracion</th>
+                            <th>Precio</th>
+                            <th>Recor</th> 
+                         </tr>
+                         </thead>
+                         <thead class="form-filter">
+                         <tr>
+                          <td></td>
+                          <td>
+                             <select ng-model="search.direction" class="form-control">
+                                  <option value="">Please Select</option> 
+                                  <option value="IN">Entrante</option>
+                                  <option value="OUT">Salienta</option>
+                            </select>
+                          </td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.calling"></td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.callingName"></td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.called"></td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.calledName"></td>
+                          <td>
+                           	<select name="statusfilter" ng-model="search.status" class="form-control">
+                                  <option value="">Please Select</option> 
+                                  <option value="ANSWER">Completeda</option>
+                                  <option value="CONGESTION">Congestion</option>
+                            </select>
+                          </td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.billSeconds"></td>
+                          <td><input type="text" class="form-control" placeholder="" ng-model="search.price"></td>      
+                          <td></td> 
+                        </tr> 
+                        </thead>
+                        
+                        <tr ng-repeat="data in data.result|filter:search">
+                          <td>{{ data.dialTime.time | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                          <td>{{data.direction === 'IN' ? 'Entrante' : 'Salienta'}}</td>
+                          <td>{{data.calling}}</td>
+                          <td>{{data.callingName}}</td>
+                          <td>{{data.called}}</td>
+                          <td>{{data.calledName}}</td>
+                          <td>{{data.status === 'ANSWER' ? 'Completeda' : 'Congestion'}}</td>
+                          <td>{{duration_for(data.billSeconds)}}</td>
+                          <td>{{data.price > 0 ? '$'+data.price : data.price}}</td>   
+                          <td> 
+          
+                           <a ng-click="playAudioFile(data.id);ShowHide(2);" ng-if="data.wasRecorded === true"> <i class="fa fa-volume-up"></i>
+                            </a> 
+
+                            </td>   
+                          <!--<td>{{data.wasRecorded === 'false' ? '' : 'Yes'}}</td>  -->
+                        </tr>
+                       
+                        </tbody>
+                          <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>{{duration_for(total_duration)}}</td>
+                          <td>{{total_price > 0 ? '$'+total_price : total_price}}</td>   
+                          <td></td>   
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
